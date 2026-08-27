@@ -1,0 +1,13 @@
+import express from "express";
+import { createNotes, getNotes , updateNote , deleteNote} from "../controllers/note.controller.js";
+
+const router = express.Router();
+
+router.post("/create-note",createNotes); 
+router.get("/get-notes",getNotes);
+router.put("/update-note/:id",updateNote);
+router.delete("/delete-note/:id",deleteNote);
+
+export default router;
+
+
